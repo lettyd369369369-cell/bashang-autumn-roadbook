@@ -1,0 +1,139 @@
+/* 泰州→坝上秋色 13天自驾路书 · V3 分享版（参考手机版式） */
+:root{
+  --bg:#f4f0e9;--paper:#fffdf9;--ink:#1f2d26;--muted:#777b75;
+  --forest:#294f40;--forest2:#416a57;--gold:#d79b43;--line:#e7e1d8;
+  --soft:#f0ebe2;--soft2:#eef2ee;--blue:#809ca6;--shadow:0 12px 32px rgba(28,42,34,.08)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Microsoft YaHei",Arial,sans-serif;
+  line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;width:100%}
+a{color:inherit;text-decoration:none}
+.shell{max-width:760px;margin:0 auto;background:var(--bg);min-height:100vh}
+
+/* ---------- Hero ---------- */
+.hero{min-height:78vh;position:relative;color:#fff;display:flex;align-items:flex-end;background:
+  linear-gradient(180deg,rgba(8,15,12,.10),rgba(8,15,12,.22) 34%,rgba(8,15,12,.84) 100%),
+  url("../images/hero.jpg") center 35%/cover no-repeat,#233d32}
+.hero-in{padding:32px 20px calc(36px + env(safe-area-inset-bottom))}
+.eyebrow{font-size:11px;letter-spacing:.16em;font-weight:800;opacity:.84}
+h1{font-size:clamp(38px,10vw,58px);line-height:1.04;letter-spacing:-.03em;margin:12px 0 14px}
+.hero p{margin:0;max-width:35em;font-size:16px;line-height:1.55;opacity:.95}
+.hero-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
+.hero-tags span{padding:7px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.32);
+  background:rgba(255,255,255,.1);font-size:12px;backdrop-filter:blur(8px)}
+
+/* ---------- 吸顶导航 ---------- */
+.sticky{position:sticky;top:0;z-index:30;background:rgba(244,240,233,.93);
+  backdrop-filter:blur(14px);border-bottom:1px solid rgba(41,79,64,.08)}
+.nav{display:flex;gap:8px;overflow:auto;padding:10px 14px;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{flex:0 0 auto;padding:8px 11px;border-radius:999px;background:#fff;
+  border:1px solid var(--line);font-size:12px;font-weight:760;color:var(--forest)}
+.nav a.on{background:var(--forest);color:#fff;border-color:var(--forest)}
+
+/* ---------- 分区 ---------- */
+section{padding:32px 16px}
+.head{margin-bottom:15px}
+.head .eyebrow{color:#8d6b39;opacity:1}
+h2{font-size:27px;line-height:1.18;letter-spacing:-.02em;margin:5px 0 8px}
+.head p{margin:0;color:var(--muted);font-size:14px}
+
+/* ---------- 宣言 / 概览 ---------- */
+.manifesto{background:linear-gradient(145deg,#2b5644,#456d59);color:#fff;
+  border-radius:22px;padding:19px;box-shadow:var(--shadow)}
+.manifesto h3{margin:0 0 7px;font-size:19px}
+.manifesto p{margin:0;font-size:13px;opacity:.87}
+.manifesto strong{color:#ffd891}
+.overview{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.ov{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:15px;box-shadow:var(--shadow)}
+.ov.big{grid-column:1/-1}
+.ov b{display:block;font-size:27px;line-height:1;margin-bottom:6px;color:var(--gold)}
+.ov h3{margin:0 0 5px;font-size:16px}
+.ov p{margin:0;font-size:12px;color:var(--muted)}
+
+/* ---------- 路线线 / 阶段 ---------- */
+.route{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:15px;box-shadow:var(--shadow);margin-top:10px}
+.route-line{display:flex;overflow:auto;padding:6px 0 2px;scrollbar-width:none}
+.route-line::-webkit-scrollbar{display:none}
+.rstop{position:relative;flex:0 0 74px;text-align:center;padding-top:16px}
+.rstop:before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:10px;height:10px;border-radius:50%;background:var(--forest);z-index:2}
+.rstop.gold:before{width:14px;height:14px;top:-2px;background:var(--gold)}
+.rstop:not(:last-child):after{content:"";position:absolute;top:4px;left:50%;width:74px;height:2px;background:#d6dbd5}
+.rstop span{display:block;font-size:12px;font-weight:820}
+.rstop small{display:block;font-size:10px;color:var(--muted)}
+.phase{display:flex;gap:8px;overflow:auto;scrollbar-width:none;margin-top:12px}
+.phase::-webkit-scrollbar{display:none}
+.phase span{flex:0 0 auto;padding:7px 10px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:11px;font-weight:760}
+.phase .go{color:#6e5c32;background:#f8eed8}
+.phase .stay{color:#315d46;background:#e9f1eb}
+.phase .back{color:#536c75;background:#e9eff2}
+
+/* ---------- 地图 ---------- */
+.map-scroll{overflow:auto;scrollbar-width:none;border-radius:14px}
+.map-scroll::-webkit-scrollbar{display:none}
+.map-scroll svg{display:block;width:100%;min-width:540px;height:auto}
+
+/* ---------- 逐日卡片 ---------- */
+.stop-card{background:var(--paper);border:1px solid var(--line);border-radius:22px;
+  overflow:hidden;box-shadow:var(--shadow);margin-bottom:14px}
+.stop-cover{position:relative;aspect-ratio:16/9;background:#ddd;overflow:hidden}
+.stop-cover.tall{aspect-ratio:auto}
+.stop-cover.tall img{max-height:340px;object-fit:cover}
+.stop-cover img{height:100%;object-fit:cover}
+.stop-cover::after{content:"";position:absolute;inset:40% 0 0;background:linear-gradient(transparent,rgba(10,18,14,.78))}
+.stop-title{position:absolute;left:15px;right:15px;bottom:14px;color:#fff;z-index:2}
+.stop-title .day{font-size:11px;opacity:.82;margin-bottom:3px}
+.stop-title h3{margin:0;font-size:22px;line-height:1.18}
+.stop-title p{margin:4px 0 0;font-size:12px;opacity:.85}
+.stop-body{padding:15px}
+.stop-summary{font-size:14px;margin-bottom:12px;color:#38463e}
+.row{display:grid;grid-template-columns:72px 1fr;gap:10px;padding:11px 0;border-top:1px solid var(--line)}
+.row:first-of-type{border-top:0}
+.label{font-size:11px;font-weight:800;color:var(--forest);padding-top:2px}
+.value{font-size:13px;color:#414b45}
+.value b{color:var(--ink)}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.chip{padding:5px 8px;border-radius:999px;background:#f3e6cc;color:#704f20;font-size:10px;font-weight:760}
+.alt{margin-top:10px;padding:10px 11px;border-radius:12px;background:#f1f4ef;font-size:12px;color:#566159}
+.alt b{color:var(--forest)}
+.stop-actions{display:flex;gap:7px;overflow:auto;margin-top:12px;padding-top:11px;
+  border-top:1px solid var(--line);scrollbar-width:none}
+.stop-actions::-webkit-scrollbar{display:none}
+.action{flex:0 0 auto;padding:7px 9px;border-radius:999px;background:var(--soft);
+  font-size:10px;font-weight:760;color:#5d5b55}
+
+/* ---------- 美食表 ---------- */
+table.food{width:100%;border-collapse:collapse;font-size:13.5px}
+table.food th{text-align:left;color:var(--forest);border-bottom:2px solid var(--line);padding:8px 8px}
+table.food td{border-bottom:1px dashed var(--line);padding:7px 8px}
+table.food td:first-child{white-space:nowrap;font-weight:800;width:76px;color:var(--forest)}
+table.food tr:last-child td{border-bottom:none}
+
+/* ---------- 贴士 / 清单 ---------- */
+.weather{display:grid;gap:8px}
+.w{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px}
+.w b{display:block;font-size:14px;margin-bottom:3px}
+.w p{margin:0;color:var(--muted);font-size:12px}
+.checks{display:grid;gap:8px}
+.check{display:flex;gap:8px;padding:11px;border-radius:13px;background:#fff;
+  border:1px solid var(--line);font-size:12px;cursor:pointer}
+.check input{margin-top:3px;accent-color:var(--forest)}
+.check.done{opacity:.55;text-decoration:line-through}
+
+/* ---------- 页脚 / 悬浮按钮 ---------- */
+.footer{padding:34px 16px 52px;text-align:center;color:var(--muted);font-size:11px}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:25;
+  border:0;width:48px;height:48px;border-radius:50%;background:var(--forest);color:#fff;
+  box-shadow:0 10px 28px rgba(24,48,38,.26);font-size:20px;cursor:pointer}
+
+@media print{.sticky,.fab{display:none}.stop-card,.ov,.route{box-shadow:none}}
+@media (min-width:700px){
+  section{padding:36px 20px}
+  .weather{grid-template-columns:1fr 1fr}
+  .checks{grid-template-columns:1fr 1fr}
+  .hero{min-height:70vh}
+}
