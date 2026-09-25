@@ -115,12 +115,12 @@
   "query": "chinese food restaurant table",
   "via": "OV"
  },
- "tianjin.jpg": {
-  "title": "File:A Factory on the Haihe, Tianjin, China - panoramio.jpg",
+ "qinhuangdao.jpg": {
+  "title": "File:At the Beidaihe beach during winter (29320527974).jpg",
   "creator": "Wikimedia Commons",
-  "license": "CC BY 3.0",
+  "license": "CC BY-SA 2.0",
   "page": "",
-  "query": "Haihe Tianjin",
+  "query": "Beidaihe beach",
   "via": "CM"
  }
 }
